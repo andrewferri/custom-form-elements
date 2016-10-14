@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Custom Form Elements by Andrew Ferri">
+  <meta name="author" content="Andrew Ferri">
+  <title>Custom Form Elements</title>
+  <link rel="stylesheet" href="custom-form-elements.min.css">
+</head>
+<body>
+
+    <form>
+
+        <p>
+            <input type="checkbox" class="custom" name="cb1" id="cb1" value="1"> <label for="cb1">Custom checkbox 1</label><br>
+            <input type="checkbox" class="custom" name="cb2" id="cb2" value="1" checked="checked"> <label for="cb2">Custom checkbox 2</label>
+        </p>
+
+        <p>
+            <input type="radio" class="custom" name="rd" id="rd1" value="yes"> <label for="rd1">Custom radio 1</label><br>
+            <input type="radio" class="custom" name="rd" id="rd2" value="no" checked="checked"> <label for="rd2">Custom radio 2</label>
+        </p>
+
+        <p>
+            <select class="custom" name="select" id="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="Really really long option">Really really long option</option>
+            </select>
+        </p>
+
+    </form>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="jquery.custom-form-elements.min.js"></script>
+    <script>
+        $('input.custom, select.custom').customFormElement();
+        $('select.custom').val('2').trigger('change');
+    </script>
+</body>
+</html>

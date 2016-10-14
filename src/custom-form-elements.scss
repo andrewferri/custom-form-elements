@@ -1,0 +1,117 @@
+@media screen {
+
+    .js-custom-checkbox,
+    .js-custom-radio {
+
+        input {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-bottom: 5px;
+            border: 1px solid #aaa;
+            vertical-align: top;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+            }
+        }
+    }
+
+    .js-custom-checkbox {
+
+        label:after {
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            line-height: 15px;
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input:checked ~ label:after {
+            content: '\2713';
+        }
+    }
+
+    .js-custom-radio {
+
+        label {
+            border-radius: 50%;
+
+            &:after {
+                left: 4px;
+                top: 4px;
+                right: 4px;
+                bottom: 4px;
+                display: block;
+                border-radius: 50%;
+            }
+        }
+
+        input:checked ~ label:after {
+            background: black;
+        }
+    }
+
+    .js-custom-select {
+        position: relative;
+        display: inline-block;
+
+        .js-label {
+            position: relative;
+            display: inline-block;
+            min-width: 100px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 30px 0 10px;
+            border: 1px solid #aaa;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                display: block;
+                margin-top: -3px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid black;
+            }
+        }
+
+        select {
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+    }
+}
+
+@media print {
+
+    .js-custom-select {
+
+        .js-label {
+            display: none;
+        }
+    }
+}

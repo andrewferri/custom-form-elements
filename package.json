@@ -1,0 +1,12 @@
+{
+  "name": "custom-form-elements",
+  "version": "1.0.0",
+  "description": "Custom stylable form elements",
+  "author": "Andrew Ferri <amethystx@gmail.com>",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  }
+}
