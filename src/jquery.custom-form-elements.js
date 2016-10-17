@@ -4,7 +4,7 @@
 
     var settings = $.extend({
       className: 'js-custom'
-    });
+    }, options);
 
     this.each(function(){
 
