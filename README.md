@@ -27,7 +27,7 @@ See *src/custom-form-elements.scss* for example CSS styling.
 
 ```html
 <input type="radio" id="rd1"><!-- Original HTML-->
-<span class="js-custom-checkbox"><input type="radio" id="rd1"><label for="rd1"></label></span><!-- Replacement -->
+<span class="js-custom-radio"><input type="radio" id="rd1"><label for="rd1"></label></span><!-- Replacement -->
 ```
 
 ```html
