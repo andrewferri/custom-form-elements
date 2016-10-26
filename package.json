@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Custom stylable form elements",
   "author": "Andrew Ferri <amethystx@gmail.com>",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/wh1tel1te/custom-form-elements.git"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-uglify": "^2.0.0",
