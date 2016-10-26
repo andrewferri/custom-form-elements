@@ -61,6 +61,7 @@
                         $el.val($(options[index]).val());
                         label.html($(options[index]).html());
                         $parent.removeClass('open');
+                        $el.trigger('change');
                     });
                 });
 
