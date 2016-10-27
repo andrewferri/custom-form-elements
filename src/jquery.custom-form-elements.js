@@ -14,7 +14,37 @@
 
             case 'INPUT':
                 $el.wrap('<span class="' + settings.className + '-' + $el.prop('type') + '" />');
+                var $parent = $el.parent();
+                var type = $el.attr('type');
                 $('<label for="' + $el.prop('id') + '" />').appendTo($el.parent());
+
+                if ($el.prop('checked') == true){
+
+                    $parent.addClass('checked');
+                }
+
+                $el.on('change', function(){
+
+                    if ($el.prop('checked') == true){
+
+                        $parent.addClass('checked');
+
+                        if (type == 'radio'){
+
+                            $('input[name=' + $el.attr('name') + ']').each(function(){
+
+                                if ($(this).prop('checked') == false){
+
+                                    $(this).parent().removeClass('checked');
+                                }
+                            });
+                        }
+
+                    } else{
+
+                        $parent.removeClass('checked');
+                    }
+                });
                 break;
 
             case 'SELECT':
